@@ -1,9 +1,10 @@
 body {
     margin: 0;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background-color: #FFFC00; /* Snapchat Yellow */
-    height: 100vh;
-    overflow: hidden;
+    background-color: lightblue; 
+    min-height: 100vh;
+    overflow-x: hidden; /* Prevent sideways scrolling */
+    overflow-y: auto;   /* ALLOW scrolling for the feed! */
 }
 
 .screen {
@@ -29,7 +30,7 @@ input {
 }
 
 .main-btn {
-    background-color: #000;
+    background-color: darkblue;
     color: white;
     border: none;
     padding: 15px 40px;
@@ -72,10 +73,78 @@ input {
 }
 
 .agree-btn {
-    background-color: #3CB2E2; /* Snap Blue */
+    background-color: darktblue; /* Snap Blue */
     color: white;
     border: none;
     padding: 12px;
     border-radius: 20px;
     font-weight: bold;
+}
+
+/* Styling for the social feed cards */
+.post-card {
+    background: white;
+    width: 100%;
+    max-width: 450px;
+    margin-bottom: 15px;
+    border-radius: 12px;
+    border: 1px solid #e1e1e1;
+    overflow: hidden;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.05);
+}
+
+.post-header {
+    padding: 12px;
+    display: flex;
+    align-items: center;
+}
+
+.post-avatar {
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.post-author {
+    font-weight: 700;
+    font-size: 14px;
+}
+
+.post-image {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: center;
+}
+
+.post-content {
+    padding: 12px;
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+/* Ensure all screens take up the full view */
+.screen {
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    box-sizing: border-box;
+}
+
+#landing-screen h1 {
+    font-weight: 800;
+    letter-spacing: -1px;
+}
+
+/* Optional: Add a subtle fade-in animation for transitions */
+#signup-screen, #tos-overlay, #home-screen {
+    animation: fadeIn 0.3s ease-in;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }
