@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>SocialApp Experiment</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+</head>
+<body>
+
+    <div id="signup-screen" class="screen">
+        <div class="logo">👻</div>
+        <h2>Create Account</h2>
+        <div class="input-group">
+            <input type="text" id="username" placeholder="Username" required>
+            <input type="email" id="email" placeholder="Email" required>
+            <input type="date" id="dob" required>
+        </div>
+        <button class="main-btn" onclick="startExperiment()">Sign Up</button>
+    </div>
+
+    <div id="tos-overlay" class="overlay" style="display:none;">
+        <div class="tos-box">
+            <h3>Terms of Service</h3>
+            <div class="tos-content">
+                <p><strong>Section 1: Data Usage</strong><br>By agreeing, you participate in a thesis study. We track interaction speed and navigation patterns.</p>
+                <p><strong>Section 2: Privacy</strong><br>Your data is anonymized and stored securely for academic analysis. You may withdraw at any time by closing the browser.</p>
+                <p><em>(Add more filler text here to simulate a real, long legal document)</em></p>
+            </div>
+            <button class="agree-btn" onclick="completeExperiment()">I Agree</button>
+        </div>
+    </div>
+
+    <div id="home-screen" class="screen" style="display:none;">
+        <div class="app-header">
+            <div class="search-bar">Search</div>
+        </div>
+        <div class="feed-content">
+            <h3>Welcome to the App!</h3>
+            <p>Your registration is complete.</p>
+            <div class="story-placeholder"></div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,81 @@
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #FFFC00; /* Snapchat Yellow */
+    height: 100vh;
+    overflow: hidden;
+}
+
+.screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    padding: 20px;
+}
+
+.logo { font-size: 80px; margin-bottom: 20px; }
+
+.input-group { width: 100%; display: flex; flex-direction: column; align-items: center; }
+
+input {
+    width: 85%;
+    padding: 15px;
+    margin: 8px 0;
+    border-radius: 10px;
+    border: 1px solid #ddd;
+    font-size: 16px;
+}
+
+.main-btn {
+    background-color: #000;
+    color: white;
+    border: none;
+    padding: 15px 40px;
+    border-radius: 30px;
+    font-weight: bold;
+    margin-top: 20px;
+    width: 80%;
+}
+
+/* This makes the overlay sit on TOP of everything else */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85); /* Semi-transparent black */
+    display: flex; /* This is what centers the box */
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Higher than anything else */
+}
+
+/* Ensure the box inside is visible */
+.tos-box {
+    background: white !important;
+    color: black !important;
+    padding: 30px;
+    border-radius: 20px;
+    width: 80%;
+    z-index: 10000;
+}
+
+.tos-content {
+    overflow-y: scroll;
+    text-align: left;
+    font-size: 14px;
+    margin: 15px 0;
+    color: #333;
+}
+
+.agree-btn {
+    background-color: #3CB2E2; /* Snap Blue */
+    color: white;
+    border: none;
+    padding: 12px;
+    border-radius: 20px;
+    font-weight: bold;
+}
