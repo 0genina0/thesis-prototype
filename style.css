@@ -91,6 +91,21 @@ input {
     flex-grow: 1; 
 }
 
+.tos-bullet {
+    display: block;          /* Puts each bullet on a new line */
+    padding-left: 20px;      /* Creates space for the hyphen */
+    text-indent: -15px;      /* Pulls the hyphen into the padding area */
+    margin-top: 8px;         /* Space between bullets */
+    font-weight: 500;        /* Makes the bulleted text slightly bolder */
+    color: #444;             /* A slightly different color to stand out */
+}
+
+.tos-bullet::before {
+    content: "- ";           /* Adds the actual hyphen */
+    font-weight: bold;
+    color: darkblue;         /* Matches your theme */
+}
+
 .agree-btn {
     background-color: darkblue;
     color: white;
