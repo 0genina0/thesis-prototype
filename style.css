@@ -65,31 +65,41 @@ input {
     z-index: 9999; /* Higher than anything else */
 }
 
-/* Ensure the box inside is visible */
+/* The white container */
 .tos-box {
     background: white !important;
     color: black !important;
-    padding: 30px;
+    padding: 20px;
     border-radius: 20px;
-    width: 80%;
+    width: 85%;
+    /* This prevents the box from growing off-screen on phones */
+    max-height: 80vh; 
+    display: flex;
+    flex-direction: column;
     z-index: 10000;
 }
 
+/* The actual scrolling text area */
 .tos-content {
-    overflow-y: scroll;
+    overflow-y: auto; /* Changed from scroll to auto for smoother mobile feel */
+    -webkit-overflow-scrolling: touch; /* Makes scrolling "bouncy" and smooth on iPhones */
     text-align: left;
     font-size: 14px;
     margin: 15px 0;
     color: #333;
+    /* This allows the text to take up the space but leave room for the button */
+    flex-grow: 1; 
 }
 
 .agree-btn {
-    background-color: darkblue; /* Snap Blue */
+    background-color: darkblue;
     color: white;
     border: none;
-    padding: 12px;
+    padding: 15px; /* Slightly larger for easier thumb-tapping */
     border-radius: 20px;
     font-weight: bold;
+    width: 100%; /* Make it big and easy to hit */
+    flex-shrink: 0; /* Ensures the button never gets squished */
 }
 
 /* Styling for the social feed cards */
