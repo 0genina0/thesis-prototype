@@ -38,6 +38,29 @@ input {
     border-radius: 10px;
     border: 1px solid #ddd;
     font-size: 16px;
+    background-color: white; /* Forces the box to be white */
+    color: #333;             /* Forces the text to be dark grey/black */
+    appearance: none;        /* Removes default mobile "bubbles" */
+    -webkit-appearance: none;
+}
+
+/* This specifically fixes the Date of Birth "Grey Box" on iPhone/Android */
+input[type="date"] {
+    min-height: 50px;       /* Ensures it's tall enough to tap */
+    position: relative;
+}
+
+/* Forces the date text to appear even if the browser tries to hide it */
+input[type="date"]::-webkit-date-and-time-value {
+    text-align: left;
+    color: #333;
+}
+
+/* Optional: Adds a "Date of Birth" label before the box if the placeholder is gone */
+input[type="date"]::before {
+    content: attr(placeholder);
+    width: 100%;
+    color: #999;
 }
 
 .main-btn {
